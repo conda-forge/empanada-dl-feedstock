@@ -25,13 +25,17 @@ requirements:
     - cztile
     - dask-core >=2022.5.2
     - imagecodecs
+    - imagehash
     - matplotlib-base
+    - mlflow
     - numba >=0.54
     - numpy >=1.20
     - opencv >=4.5.3
     - python >=3.7
     - pyyaml
     - scikit-image >=0.19
+    - simpleitk
+    - tqdm
     - pytorch >=1.10
     - torchvision >=0.2
     - zarr >=2.12
