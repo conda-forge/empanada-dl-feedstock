@@ -1,5 +1,5 @@
 {% set name = "empanada-dl" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/empanada-dl-{{ version }}.tar.gz
-  sha256: 1773af4f29c39a50a9ebce804e9948f28118748951acbbf62550e41ee5357291
+  sha256: 4289e69842242203be77cdb656a12fb2be4ed83816969b24a0b4eab1d67c3b91
 
 build:
   noarch: python
@@ -25,13 +25,17 @@ requirements:
     - cztile
     - dask-core >=2022.5.2
     - imagecodecs
+    - imagehash
     - matplotlib-base
+    - mlflow
     - numba >=0.54
     - numpy >=1.20
     - opencv >=4.5.3
     - python >=3.7
     - pyyaml
     - scikit-image >=0.19
+    - simpleitk
+    - tqdm
     - pytorch >=1.10
     - torchvision >=0.2
     - zarr >=2.12
