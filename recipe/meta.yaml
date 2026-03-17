@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/empanada-dl-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/empanada-dl-{{ version }}.tar.gz
   sha256: 4289e69842242203be77cdb656a12fb2be4ed83816969b24a0b4eab1d67c3b91
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - albumentations >=1.2
@@ -31,7 +31,7 @@ requirements:
     - numba >=0.54
     - numpy >=1.20
     - opencv >=4.5.3
-    - python >=3.7
+    - python >={{ python_min }}
     - pyyaml
     - scikit-image >=0.19
     - simpleitk
@@ -48,6 +48,7 @@ test:
     # - pip check  # because opencv-python
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/volume-em/empanada
